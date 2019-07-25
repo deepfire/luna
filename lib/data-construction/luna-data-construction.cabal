@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2848424c4b76ac5cd62e781c84f5d6db2d5b38d396e43ba9c7a56211e96ea448
+
+name:           luna-data-construction
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.Construction
+  other-modules:
+      Paths_luna_data_construction
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , luna-generic-traversable
+  default-language: Haskell2010

@@ -1,0 +1,40 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 76c5bc106cd8951c962f03c496eb79b6750f0008b4e081ab546b11a7684e1125
+
+name:           luna-generic-traversable
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.Generics.Traversable
+      Data.Generics.Traversable.Class
+      Data.Generics.Traversable.Deriving
+      Data.Generics.Traversable.Instances
+      Data.Generics.Traversable.Zipper
+  other-modules:
+      Paths_luna_generic_traversable
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , mtl
+    , prologue
+    , template-haskell
+    , transformers
+  default-language: Haskell2010

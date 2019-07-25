@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c7c165926335f233852a8b72cff7f00b1067731ae812bc394bbfa9953194c321
+
+name:           luna-autovector
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team <contact@luna-lang.org>
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.AutoVector.Storable.Mutable
+  other-modules:
+      Paths_luna_autovector
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , luna-foreign-utils
+    , prologue >=3.0.0
+    , vector
+  default-language: Haskell2010

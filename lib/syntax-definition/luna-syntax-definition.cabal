@@ -1,0 +1,40 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3dda6d82a0eae65578c3bc09cafa50f15073d3774ef9b1773c6da93bdede994b
+
+name:           luna-syntax-definition
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Language.Symbol
+      Language.Symbol.Label
+      Language.Symbol.Operator.Assoc
+      Language.Symbol.Operator.Prec
+  other-modules:
+      Paths_luna_syntax_definition
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , containers
+    , layered-state
+    , lens
+    , lens-utils
+    , prologue >=3.0.0
+  default-language: Haskell2010

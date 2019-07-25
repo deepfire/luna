@@ -1,0 +1,56 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 18d5b0068d4600a386954c88315d5a01fec42e34681684533513ef2ed4029692
+
+name:           luna-foreign-utils
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.Mutable.Class2
+      Data.Mutable.Plain
+      Foreign.DynamicStorable
+      Foreign.DynamicStorable1
+      Foreign.ForeignPtr.Utils
+      Foreign.Info.ByteSize
+      Foreign.Ptr.Utils
+      Foreign.Storable.Class
+      Foreign.Storable.Deriving
+      Foreign.Storable.Utils
+      Foreign.Storable1
+      Foreign.Storable1.Deriving
+      Foreign.Storable1.Ptr
+      Memory
+      Memory.Allocation
+      Memory.Data.Ptr
+      Memory.Data.Region
+      Memory.Management
+  other-modules:
+      Paths_luna_foreign_utils
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , convert
+    , layered-state
+    , lens
+    , luna-th-builder
+    , prologue
+    , template-haskell
+    , typelevel
+  default-language: Haskell2010

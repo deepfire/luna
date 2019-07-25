@@ -1,0 +1,38 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b86cc40fca1be3fb0c51d61568522cb64522038051516d5ae6d7df20dcfe1740
+
+name:           luna-syntax-text-model
+version:        0.1
+author:         Luna Team <contact@luna-lang.org>
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Marcin Kostrzewa <marcin.kostrzewa@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+build-type:     Simple
+
+library
+  exposed-modules:
+      Luna.Syntax.Text.Scope
+      Luna.Syntax.Text.Source
+  other-modules:
+      Paths_luna_syntax_text_model
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , containers
+    , data-poset
+    , layered-state
+    , lens-utils
+    , luna-core
+    , luna-nested-containers
+    , luna-syntax-definition
+    , luna-text-processing
+    , prologue
+    , vector-text
+  default-language: Haskell2010

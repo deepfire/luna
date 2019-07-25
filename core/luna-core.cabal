@@ -1,0 +1,226 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c681645a3b2e2cd1d25b9e804a16722feee7b78224e59bc43b5dacdf8e726552
+
+name:           luna-core
+version:        0.0.6
+synopsis:       Luna Core
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Marcin Kostrzewa <marcin.kostrzewa@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.Graph.Component.Edge
+      Data.Graph.Component.Edge.Class
+      Data.Graph.Component.Edge.Construction
+      Data.Graph.Component.Edge.Destruction
+      Data.Graph.Component.Node.Class
+      Data.Graph.Component.Node.Construction
+      Data.Graph.Component.Node.Destruction
+      Data.Graph.Component.Node.Layer
+      Data.Graph.Component.Node.Layer.Model
+      Data.Graph.Component.Node.Layer.Type
+      Data.Graph.Component.Node.Layer.Users
+      Data.Graph.Data
+      Data.Graph.Data.Component.Class
+      Data.Graph.Data.Component.List
+      Data.Graph.Data.Component.Maybe
+      Data.Graph.Data.Component.Set
+      Data.Graph.Data.Component.Vector
+      Data.Graph.Data.Graph.Class
+      Data.Graph.Data.Layer.Class
+      Data.Graph.Data.Layer.Layout
+      Data.Graph.Fold.Class
+      Data.Graph.Fold.Conditional
+      Data.Graph.Fold.Deep
+      Data.Graph.Fold.Filter
+      Data.Graph.Fold.Layer
+      Data.Graph.Fold.LayerMap
+      Data.Graph.Fold.Partition
+      Data.Graph.Fold.Scoped
+      Data.Graph.Fold.ScopedMap
+      Data.Graph.Fold.Struct
+      Data.Graph.Fold.SubComponents
+      Data.Graph.Fold.SubTree
+      Data.Graph.Store
+      Data.Graph.Store.Alloc
+      Data.Graph.Store.Buffer
+      Data.Graph.Store.Component
+      Data.Graph.Store.Internal
+      Data.Graph.Store.Size.Class
+      Data.Graph.Store.Size.Discovery
+      Data.Graph.Transform.Substitute
+      Luna
+      Luna.Data.Name
+      Luna.IR
+      Luna.IR.Aliases
+      Luna.IR.Layer
+      Luna.IR.Link
+      Luna.IR.Term
+      Luna.IR.Term.Ast
+      Luna.IR.Term.Ast.Class
+      Luna.IR.Term.Ast.Invalid
+      Luna.IR.Term.Core
+      Luna.IR.Term.Format
+      Luna.IR.Term.Instances
+      Luna.IR.Term.Literal
+      Luna.Pass
+      Luna.Pass.Attr
+      Luna.Pass.Basic
+      Luna.Pass.Scheduler
+      OCI.Data.Name
+      OCI.Data.Name.Class
+      OCI.Data.Name.Instances
+      OCI.Data.Name.Qualified
+      OCI.IR.Link.Class
+      OCI.IR.Term
+      OCI.IR.Term.Class
+      OCI.IR.Term.Definition
+      OCI.IR.Term.Format
+      OCI.IR.Term.Layout
+      OCI.Pass.Definition.Class
+      OCI.Pass.Definition.Declaration
+      OCI.Pass.Definition.Dynamic
+      OCI.Pass.Definition.Interface
+      OCI.Pass.Management.Scheduler
+      OCI.Pass.State.Attr
+      OCI.Pass.State.Cache
+      OCI.Pass.State.Encoder
+  other-modules:
+      Paths_luna_core
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      async
+    , base
+    , bytestring
+    , container
+    , containers
+    , convert
+    , data-default
+    , deepseq
+    , functor-utils
+    , ghc
+    , layered-state
+    , lens
+    , lens-utils
+    , luna-autovector
+    -- , luna-cpp-containers
+    , luna-data-construction
+    , luna-data-property
+    , luna-data-storable
+    , luna-data-tag
+    , luna-data-typemap
+    , luna-exception
+    , luna-foreign-utils
+    , luna-generic-traversable
+    , luna-memory-manager
+    , luna-memory-pool
+    , luna-nested-containers
+    , luna-syntax-definition
+    , luna-th-builder
+    , luna-tuple-utils
+    , luna-type-cache
+    , monad-branch
+    , monoid
+    , mtl
+    , primitive
+    , prologue
+    , random
+    , split
+    , storable-tuple
+    , template-haskell
+    , transformers
+    , typelevel
+    , vector
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Luna.Test.Spec.IRSpec
+      Spec
+      Paths_luna_core
+  hs-source-dirs:
+      test/spec
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  ghc-options: -rtsopts -threaded -with-rtsopts=-N -with-rtsopts=-T
+  build-depends:
+      base
+    , container
+    , containers
+    , hspec
+    , hspec-expectations-lifted
+    , luna-core
+    -- , luna-cpp-containers
+    , luna-data-storable
+    , luna-exception
+    , luna-foreign-utils
+    , luna-generic-traversable
+    , prologue
+    , random
+    , typelevel
+  default-language: Haskell2010
+
+benchmark array-benchmark
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Luna.Test.Bench.IR
+      Luna.Test.Bench.MemoryManager
+      Luna.Test.Bench.Test
+      Paths_luna_core
+  hs-source-dirs:
+      test/bench
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  ghc-options: -rtsopts -threaded -with-rtsopts=-N -with-rtsopts=-T
+  cc-options: -std=c++14 -O3
+  include-dirs:
+      test/bench/cbits
+  c-sources:
+      test/bench/cbits/PtrRWLoop.cpp
+  extra-libraries:
+      stdc++
+  build-depends:
+      ansi-terminal
+    , base
+    , containers
+    , convert
+    , criterion >=1.3.0.0
+    , deepseq
+    , ghc
+    , layered-state
+    , luna-autovector
+    , luna-core
+    -- , luna-cpp-containers
+    , luna-data-storable
+    , luna-data-typemap
+    , luna-exception
+    , luna-foreign-utils
+    , luna-generic-traversable
+    , luna-generic-traversable2
+    , luna-memory-manager
+    , luna-memory-pool
+    , luna-tuple-utils
+    , mtl
+    , primitive
+    , prologue
+    , structs
+    , unboxed-ref >=0.4.0.0
+    , vector
+  default-language: Haskell2010

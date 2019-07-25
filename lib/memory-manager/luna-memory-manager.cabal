@@ -1,0 +1,48 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f90c01baa27fd470964455d76dc0567adee6130b3441cf7f52d84499faef6102
+
+name:           luna-memory-manager
+version:        1.0.0
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+extra-source-files:
+    src/cbits/api.h
+    src/cbits/benchmark.cpp
+    src/cbits/CMakeLists.txt
+    src/cbits/memory.cpp
+    src/cbits/memory.h
+
+library
+  exposed-modules:
+      Foreign.Memory.Manager
+  other-modules:
+      Paths_luna_memory_manager
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  cc-options: -std=c++14 -O3
+  include-dirs:
+      src/cbits
+  c-sources:
+      src/cbits/memory.cpp
+  extra-libraries:
+      stdc++
+  build-depends:
+      base
+    , convert
+    , deepseq
+    , prologue >=3.0.0
+  default-language: Haskell2010

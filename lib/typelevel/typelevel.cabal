@@ -1,0 +1,54 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cacb20d66e09735b2f4138a4f15ff7cce8775959702e04606818faa565dafa5e
+
+name:           typelevel
+version:        1.2.3
+category:       Data
+stability:      experimental
+homepage:       https://github.com/luna/luna
+bug-reports:    https://github.com/luna/luna/issues
+author:         Luna Team
+maintainer:     Wojciech Danilo  <wojciech.danilo@luna-lang.org>,
+                Ara Adkins       <ara.adkins@luna-lang.org>
+copyright:      Copyright (C) 2018 Luna Team
+license:        Apache-2.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Type.Data.Bool
+      Type.Data.Constraint
+      Type.Data.List
+      Type.Data.Map
+      Type.Data.Map.Generic
+      Type.Data.Maybe
+      Type.Data.Ord
+      Type.Data.Ord.Class
+      Type.Data.Ord.Generic
+      Type.Data.Ord.TH
+      Type.Data.Parameter
+      Type.Data.Property
+      Type.Data.Semigroup
+      Type.Data.Set
+      Type.Data.Set.Proxy
+      Type.Data.Wrapped
+      Type.Error
+      Type.Known
+      Type.Show
+  other-modules:
+      Paths_typelevel
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DerivingStrategies DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase LiberalTypeSynonyms MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving Strict StrictData TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators UnicodeSyntax ViewPatterns
+  build-depends:
+      base
+    , constraint
+    , convert
+    , luna-th-builder
+    , template-haskell
+  default-language: Haskell2010
