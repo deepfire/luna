@@ -6,6 +6,7 @@ import Prelude
 
 import           Conduit
 import           Data.Convert
+import           Control.Monad.Catch (MonadThrow)
 import           Control.Monad.Trans.Resource (MonadResource)
 
 import           Data.Text32 (Text32)
@@ -13,7 +14,7 @@ import qualified Data.Text32 as Text32
 
 
 -- FIXME[WD]: SourceReader reads bytestring to Data.Text and converts it to Text32 via [Char], which is very inefficient
-sourceReader :: MonadResource m => FilePath -> ConduitM any Text32 m ()
+sourceReader :: (MonadThrow m, MonadResource m) => FilePath -> ConduitM any Text32 m ()
 sourceReader t = sourcePreprocessor $ mapOutput convert $ sourceFile t .| decodeUtf8C ; {-# INLINE sourceReader #-}
 
 sourceProducer :: Monad m => Text32 -> ConduitM any Text32 m ()
