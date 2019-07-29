@@ -49,6 +49,7 @@ library
     , exceptions
     , fingertree
     , functor-utils
+    , ghcjs-base
     , lens
     , lens-utils
     , mtl

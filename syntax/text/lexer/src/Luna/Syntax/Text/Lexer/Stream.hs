@@ -1,3 +1,5 @@
+{-# LANGUAGE CPP                #-}
+
 module Luna.Syntax.Text.Lexer.Stream where
 
 import Prologue hiding (unless, span)
@@ -21,7 +23,9 @@ import Data.Text32 (Text32)
 import Data.Conduit.Utils
 import qualified Data.Text32 as Text32
 
-
+#ifdef __GHCJS__
+import qualified Data.JSString.Raw as JSS
+#endif
 
 -------------------
 -- === Error === --
@@ -56,7 +60,11 @@ instance AttoparsecInput B.ByteString where
 instance AttoparsecInput T.Text where
     isNull    = T.null                     ; {-# INLINE isNull    #-}
     getLength = convert . T.length         ; {-# INLINE getLength #-}
+#ifdef __GHCJS__
+    stripEnd (TI.Text arr1) (TI.Text arr2) = TI.Text $ JSS.rawDropEnd (JSS.rawLength arr1 - JSS.rawLength arr2) arr1; {-# INLINE stripEnd #-}
+#else
     stripEnd (TI.Text arr1 off1 len1) (TI.Text _ _ len2) = TI.text arr1 off1 (len1 - len2) ; {-# INLINE stripEnd #-}
+#endif
 
 instance AttoparsecInput Text32 where
     isNull    = Text32.null                     ; {-# INLINE isNull    #-}
