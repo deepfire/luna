@@ -14,12 +14,6 @@ import           Data.Text.Position            (Delta)
 import           Data.Text32                   (Text32)
 
 
--- vvv Missing instances vvv --
-
-instance Measured v a => Semigroup (FingerTree v a) where (<>) = (FT.><) ; {-# INLINE (<>) #-}
-
--- ^^^ ----------------- ^^^ --
-
 ------------------
 -- === Span === --
 ------------------
