@@ -1,0 +1,107 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b0c3c91ac830ba6218c37ff297b561b650493d90a551afbe7ce42dd22a349ac9
+
+name:           luna-lexer
+version:        0.2
+author:         Luna Team <contact@luna-lang.org>
+maintainer:     Luna Team <contact@luna-lang.org>
+build-type:     Simple
+
+library
+  exposed-modules:
+      Luna.Syntax.Text.Analysis.Disabled
+      Luna.Syntax.Text.Analysis.SpanTree
+      Luna.Syntax.Text.IO
+      Luna.Syntax.Text.Lexer
+      Luna.Syntax.Text.Lexer.Grammar
+      Luna.Syntax.Text.Lexer.Runner
+      Luna.Syntax.Text.Lexer.Stream
+      Luna.Syntax.Text.Lexer.Symbol
+      Luna.Syntax.Text.Lexer.Token
+      Data.Attoparsec.Text32
+      Data.Parser
+      Data.Parser.Instances.Attoparsec
+      Data.Conduit.Utils
+  other-modules:
+      Paths_luna_lexer
+  hs-source-dirs:
+      src
+      src-libs/attoparsec-text32
+      src-libs/parsing
+      src-libs/conduit-utils
+  default-extensions: AllowAmbiguousTypes ApplicativeDo Arrows BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels PackageImports QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns LiberalTypeSynonyms RelaxedPolyRec
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , conduit
+    , conduit-combinators
+    , constraints
+    , containers
+    , convert
+    , data-default
+    , dependent-state
+    , exceptions
+    , fingertree
+    , functor-utils
+    , lens
+    , lens-utils
+    , mtl
+    , parsert
+    , primitive
+    , prologue
+    , resourcet
+    , text
+    , text-processing
+    , transformers
+    , typelevel
+    , vector
+    , vector-text
+  default-language: Haskell2010
+
+benchmark lexer-benchmark
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_luna_lexer
+  hs-source-dirs:
+      test/bench
+  default-extensions: AllowAmbiguousTypes ApplicativeDo Arrows BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels PackageImports QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns LiberalTypeSynonyms RelaxedPolyRec
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , conduit
+    , conduit-combinators
+    , conduit-extra
+    , constraints
+    , containers
+    , convert
+    , criterion
+    , data-default
+    , dependent-state
+    , exceptions
+    , fingertree
+    , functor-utils
+    , lens
+    , lens-utils
+    , luna-lexer
+    , mtl
+    , parsert
+    , primitive
+    , prologue
+    , random
+    , resourcet
+    , text
+    , text-processing
+    , timeit
+    , transformers
+    , typelevel
+    , vector
+    , vector-text
+  default-language: Haskell2010
